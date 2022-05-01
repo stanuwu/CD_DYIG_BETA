@@ -26,10 +26,10 @@ namespace CD_DYIG_BETA
             string armor = "Hardened Test Armor";
             string extra = "Supreme Test Talisman";
             decimal multi = 1.25m;
-            string imageurl = "https://images-ext-2.discordapp.net/external/Bel6A-nX6L6kES_xXEk31HSKMq8HeQGTM3_EfczThMs/%3Fsize%3D128/https/cdn.discordapp.com/avatars/623984743914012712/a_e6402dd8b108181b7c2f849a8dcf084e.gif";
+            string imageurl = "https://www.skansen.se/imager/www_skansen_se/uploads-aws/Besoeksinfo/Restauranger/gubbhyllanextMA_d8657c9a17e123a2fcdd697d12da885a.jpg";
 
             using (Bitmap image = new Bitmap("bg1.png"))
-            using (Font hfont = new Font("Dubai Light", 54))
+            using (Font hfont = new Font("Dubai Regular", 45))
             using (Font dfont = new Font("Consolas", 28))
             using (Font gfont = new Font("Consolas", 20))
             using (Graphics g = Graphics.FromImage(image))
@@ -46,7 +46,7 @@ namespace CD_DYIG_BETA
                 center.Alignment = StringAlignment.Center;
 
                 //draw name
-                g.DrawString(name, hfont, hbrush, new PointF(170, 20));
+                g.DrawString(name, hfont, hbrush, new PointF(185, 60));
 
                 //draw desciption
                 g.DrawString(description, dfont, brush, new Rectangle(180, 95, 390, 70));
@@ -61,13 +61,13 @@ namespace CD_DYIG_BETA
                 g.DrawString(exp.ToString("N0").Replace(",", "."), gfont, brush, new Rectangle(343, 270, 237, 34));
 
                 //draw level
-                g.DrawString("Lvl " + level, dfont, brush, new Rectangle(50, 175, 100, 35), center);
+                g.DrawString("LVL " + level, dfont, brush, new Rectangle(442, 120, 100, 35), center);
 
                 //draw class
-                g.DrawString("Class: " + cclass, gfont, brush, new Rectangle(385, 180, 195, 34));
+                g.DrawString(cclass, gfont, brush, new Rectangle(240, 125, 195, 34));
 
                 //draw title
-                g.DrawString("Title: " + title, gfont, brush, new Rectangle(172, 180, 192, 34));
+                g.DrawString(title, gfont, brush, new Rectangle(172, 180, 192, 34));
 
                 //drawhealthbar
                 int healthbarlength = (int)Math.Round(((double)512/maxhp)*hp);
